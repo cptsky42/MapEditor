@@ -1,0 +1,43 @@
+#include <WinResrc.h>
+
+#define VER_VERSION             2,0,0,2
+#define VER_VERSION_STR         "2.0.0.2"
+
+MAINICON ICON "icon.ico"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    	VER_VERSION
+PRODUCTVERSION 	VER_VERSION
+FILEFLAGSMASK  	VS_FFI_FILEFLAGSMASK
+
+#ifdef DEBUG
+FILEFLAGS       (VS_FF_PRERELEASE|VS_FF_DEBUG)
+#else
+FILEFLAGS       0
+#endif // DEBUG
+
+FILEOS          VOS__WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "Comments",                   ""
+            VALUE "CompanyName",                ""
+            VALUE "FileDescription",            "GameMap editor for TQ Digital games."
+            VALUE "FileVersion",                VER_VERSION_STR
+            VALUE "InternalName",               "MapEditor"
+            VALUE "LegalCopyright",             "Copyright (C) CptSky 2008 - 2013"
+            VALUE "OriginalFilename",           "MapEditor.exe"
+            VALUE "ProductName",                "MapEditor"
+            VALUE "ProductVersion",             VER_VERSION_STR
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
