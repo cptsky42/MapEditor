@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>474</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>474</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>474</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Map Editor - 2.0.0 - CptSky</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../res/mainwindow.qrc">
+    <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="mLblFile">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>62</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>File :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="mTxtFile">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>10</y>
+      <width>571</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="dragEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="mGrpEditMap">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>70</y>
+      <width>251</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Map Information</string>
+    </property>
+    <widget class="QLabel" name="mLblUniqId">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>80</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Unique ID :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mLblPath">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>80</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Path :</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="mBtnDelete">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>120</y>
+       <width>114</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mLblPuzzle">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>80</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Puzzle :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mTxtUniqId">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>27</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+     <property name="maxLength">
+      <number>5</number>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mTxtPath">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>57</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mTxtPuzzle">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>87</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+     <property name="maxLength">
+      <number>4</number>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="mBtnEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>114</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Edit</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="mBtnLoad">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>40</y>
+      <width>114</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mBtnOpen">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>40</y>
+      <width>114</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mBtnSave">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>400</y>
+      <width>114</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save File</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="mGrpBackup">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>70</y>
+      <width>231</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>File Backup</string>
+    </property>
+    <widget class="QLineEdit" name="mTxtBackup">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>211</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>GameMap.dat.bak</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="mBtnBackup">
+     <property name="geometry">
+      <rect>
+       <x>33</x>
+       <y>57</y>
+       <width>171</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Make Backup</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mTxtRestore">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>211</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>GameMap.dat.bak</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="mBtnRestore">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>117</y>
+       <width>171</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Restore Backup</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="mGrpSearch">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>230</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Search</string>
+    </property>
+    <widget class="QLabel" name="mLblSearch">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>62</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Map Id :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mTxtSearch">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>30</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+     <property name="maxLength">
+      <number>5</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="mBtnSearch">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>27</y>
+       <width>71</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Go</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="mGrpAbout">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>290</y>
+      <width>231</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>About</string>
+    </property>
+    <widget class="QLabel" name="mLblAbout">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>211</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>This application is designed by CptSky. It can be used to managed the GameMap files of TQ games.
+
+Build for %s (%s), using Qt %s, the %s...</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignJustify|Qt::AlignTop</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="mGrpNewMap">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>230</y>
+      <width>251</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Map Information</string>
+    </property>
+    <widget class="QLabel" name="mLblNewUniqId">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>80</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Unique ID :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mLblNewPath">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>80</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Path :</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="mBtnCreate">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>120</y>
+       <width>114</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Create</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mLblNewPuzzle">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>80</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Puzzle :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mTxtNewUniqId">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>27</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+     <property name="maxLength">
+      <number>5</number>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mTxtNewPath">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>57</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="mTxtNewPuzzle">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>87</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+     <property name="maxLength">
+      <number>4</number>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QListWidget" name="mListWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>121</width>
+      <height>431</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../../../res/mainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>
